@@ -1,0 +1,52 @@
+/* Custom variables */
+:root {
+  --body-bg-color: hsl(185, 41%, 84%);
+  --primary-color: hsl(183, 100%, 15%);
+  --primary-inactive: hsl(183, 79%, 24%);
+  --primary-active: hsl(172, 67%, 45%);
+  --primary-hover: hsl(172, 61%, 77%);
+  --card-bg-color: hsl(0, 100%, 100%);
+  --input-bg-color: hsl(189, 47%, 97%);
+  --placeholder-txt: hsl(184, 14%, 56%);
+  --label-txt: hsl(186, 14%, 43%);
+  --error-color: hsl(10, 95%, 61%);
+}
+
+/* Universal, image, button & input reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* body & main starter styles */
+body {
+  background-color: var(--body-bg-color);
+  color: var(--primary-color);
+  font-family: "Space Mono", Consolas, monospace;
+  font-size: 1.5rem;
+}
+
+/* Grid and Flexbox defaults */
+
+/* Styles */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERY */
