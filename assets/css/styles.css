@@ -282,7 +282,7 @@ label:has(input:checked) {
 
 /* MEDIA QUERIES */
 /* very small screens */
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 23.125em) {
   .error-msg {
     top: 1.5rem;
     left: 0;
@@ -297,7 +297,7 @@ label:has(input:checked) {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 62em) {
   .calculator {
     width: clamp(40rem, 100%, 56rem);
     flex-direction: row;

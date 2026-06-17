@@ -154,7 +154,7 @@ function resetOutputs() {
 // EVENT LISTENERS
 //
 // Prevents scroll behavior on number inputs
-document.addEventListener("wheel", function (e) {
+document.addEventListener("wheel", function () {
   if (document.activeElement.type === "number") {
     document.activeElement.blur();
   }
