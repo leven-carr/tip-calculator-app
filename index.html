@@ -25,8 +25,139 @@
     <script src="./assets/js/script.js" defer></script>
   </head>
   <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
+    <main class="flex-container main">
+      <img src="./assets/images/logo.svg" alt="Splitter logo" />
+      <h1 class="sr-only">Tip Calculator App</h1>
+
+      <form class="calculator flex-container" id="calculator">
+        <div class="calc-inputs flex-container">
+          <div class="input-group flex-container">
+            <label for="bill" class="input-label">Bill</label>
+            <input
+              type="number"
+              name="bill"
+              id="bill"
+              class="input-field bill"
+              placeholder="0"
+              aria-describedby="bill-error"
+            />
+            <span class="error-msg" id="bill-error" aria-live="polite"
+              >Can't be zero</span
+            >
+          </div>
+
+          <fieldset class="tip-options">
+            <legend class="input-label">Select Tip %</legend>
+            <div class="tip-btn-wrapper flex-container">
+              <label for="tip-5" class="tip-btn">
+                <input
+                  type="radio"
+                  name="tip-percent"
+                  id="tip-5"
+                  value="0.05"
+                  class="sr-only"
+                />
+                5%</label
+              >
+
+              <label for="tip-10" class="tip-btn">
+                <input
+                  type="radio"
+                  name="tip-percent"
+                  id="tip-10"
+                  value="0.10"
+                  class="sr-only"
+                />
+                10%</label
+              >
+
+              <label for="tip-15" class="tip-btn">
+                <input
+                  type="radio"
+                  name="tip-percent"
+                  id="tip-15"
+                  value="0.15"
+                  class="sr-only"
+                />
+                15%</label
+              >
+
+              <label for="tip-20" class="tip-btn">
+                <input
+                  type="radio"
+                  name="tip-percent"
+                  id="tip-20"
+                  value="0.20"
+                  class="sr-only"
+                />
+                20%</label
+              >
+
+              <label for="tip-25" class="tip-btn">
+                <input
+                  type="radio"
+                  name="tip-percent"
+                  id="tip-25"
+                  value="0.25"
+                  class="sr-only"
+                />
+                25%</label
+              >
+
+              <label for="custom" class="sr-only">Custom Tip Percentage</label>
+              <input
+                type="number"
+                name="custom"
+                id="custom"
+                class="tip-btn custom"
+                placeholder="Custom %"
+              />
+            </div>
+          </fieldset>
+
+          <div class="input-group flex-container">
+            <label for="people" class="input-label">Number of People</label>
+            <input
+              type="number"
+              name="people"
+              id="people"
+              class="input-field people"
+              placeholder="0"
+              aria-describedby="people-error"
+            />
+            <span class="error-msg" id="people-error" aria-live="polite"
+              >Can't be zero</span
+            >
+          </div>
+        </div>
+
+        <div class="calc-outputs flex-container">
+          <div class="output-group flex-container">
+            <label for="tip-output" class="output-label flex-container">
+              Tip Amount
+              <span class="sub-label">/ person</span>
+            </label>
+            <output name="tip-output" id="tip-output" class="output"
+              >$0.00</output
+            >
+          </div>
+
+          <div class="output-group flex-container">
+            <label for="total-output" class="output-label flex-container">
+              Total
+              <span class="sub-label">/ person</span>
+            </label>
+            <output name="total-output" id="total-output" class="output"
+              >$0.00</output
+            >
+          </div>
+
+          <button type="reset" class="reset-btn" id="reset-btn" disabled>
+            Reset
+          </button>
+        </div>
+      </form>
+    </main>
 
     <footer class="attribution">
       Challenge by

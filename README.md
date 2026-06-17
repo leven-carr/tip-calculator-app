@@ -1,106 +1,107 @@
-# Frontend Mentor - Tip calculator app
+# Frontend Mentor - Tip calculator app solution
 
-![Design preview for the Tip calculator app coding challenge](./preview.jpg)
+This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Project workflow](#project-workflow)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this tip calculator app and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Calculate the correct tip and total cost of the bill per person
 
-### Want some support on the challenge? 
+### Links
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## Where to find everything
+## My process
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Built with
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+vanilla HTML, CSS, and JS
 
-If you would like the Figma design file to gain experience using professional tools and build more accurate projects faster, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### Project workflow
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+With the use of AI in this project, my workflow was a little different than previous Frontend Mentor projects. I began by attempting the project by myself with no AI guidance, and actually had a working, if not polished, app. However, I created some significant bugs when trying to add quality-of-life features, and ultimately just felt like my code was too messy and convoluted, even though it technically worked. At this point I used Gemini, providing it with a brief explanation of the challenge, as well as copies of my code. Its recommendations for HTML and CSS were very minimal, but it helped me overhaul my JS (see AI Collaboration below).
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### What I learned
 
-## Using AI coding assistants
+This project introduced me to several new concepts, mostly concerning JS, but with a couple specifics for HTML and CSS as well.
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+For HTML, I was reminded of the importance of accessibility features, and used the attributes `aria-describedby` and `aria-live="polite"` to properly link the error messages with their respective form inputs in a way that screenreaders can detect. For CSS, I don't think there was anything brand new, but I got some practice with using `:has` and `:not` pseudo-classes, as well as `:focus-visible` as opposed to just `:focus`.
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+For JS, I was introduced to guard clauses and the concept of failing fast, which was definitely a bit of a lightbulb moment and helped me see how I can greatly simplify conditionals. I was also introduced to `parseFloat` and `parseInt`, which can be beneficial for cleaning up messy user input, as they can parse out extra characters from a given string whereas `Number()` cannot. In my script, I used `parseInt(people.value, 10)` to ensure the user input for the number of people is strictly evaluated as a base-10 integer. Conversely, I used `parseFloat(bill.value)` to allow decimals in the bill input. Another thing I learned about was how the difference between decimal and binary radices can ever so slightly alter number values, which would be something to keep in mind for working with very large numbers.
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+### Continued development
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+In the future, I want to continue improving my optimization of the script, particularly when it comes to conditionals and organization of event listeners.
 
-## Building your project
+### Useful resources
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+- [MDN Web Docs :focus-visible](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus-visible#focus_vs_focus-visible) - Documentation that explains the difference between :focus and :focus-shown.
+- [ParseFloat vs ParseInt in JavaScript](https://medium.com/@roy.elaawar/parsefloat-vs-parstint-in-javascript-4f3d345f205f) - Article that explains what parseFloat and parseInt are and how they might be used. This is a little bit more straightforward and easier to grasp than the MDN Web Docs pages for parseFloat and parseInt, although those are good too.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### AI Collaboration
 
-## Deploying your project
+This project marked my first time using generative AI (Gemini) for help. I wanted to make a conscientious effort to use this as a tool to organize and optimize my code, rather than just copying and pasting code snippets without understanding how they improved my script. Throughout the process I asked it to explain various suggestions, evaluate trade-offs in readability, and brainstorm with me to fine-tune details in the UI/UX.
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+### Architectural Changes and Refactoring Examples
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- **Switching to Guard Clauses:** Originally, I got hung up on writing validation that tried to force a true status in order to pass (`if okay -> keep going`). Gemini recommended using guard clauses (`if bad -> halt`), which eliminated some complex if statements to make my code much more readable, and introduced to me to the concept of failing fast.
+- **Cleaner Boolean Logic:** Gemini showed me how to shorten my condition checks by grouping operations:
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
+  ```javascript
+  // Before: if ((a && b && c) || (a && b && d))
+  // After:  if (a && b && (c || d))
+  ```
 
-## Create a custom `README.md`
+- **Storing Data in Objects vs Arrays:** For some function outputs, my first draft of the code returned the data in arrays. Gemini recommended returning the data in an object instead to make the code more maintainable. If I were to add another output, it could potentially break index-dependent code, whereas objects are more scalable and self-documenting due to their key-value pairs.
+- **Best Practice for Navigating the DOM** For my `showError` and `clearError` functions, I originally used `.nextElementSibling`. Even though I know that it's functional for the app's layout, Gemini recommended using `.closest()` with a `querySelector`. This technique is better practice because it provides more flexibility for the DOM to change without breaking the app.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+### Accessibility, Edge Cases, and Event Listeners
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+- **Accessible Error Messages:** After reviewing my code, Gemini recommended that I implement `aria-describedby` on the input fields and `aria-live="polite"` on the error text spans. This way, screen readers will actually detect the error messages and inform the user without being disruptive.
+- **Floating Point Math Accuracy:** Gemini recommended the use of `parseFloat` and `parseInt` over `Number()` and introduced a step that converts values to cents, rounds them, and converts them back to dollars. While it was probably overkill for the scale of this app, it was still a valuable learning experience regarding floating-point arithmetic. Because computers use binary, which struggles to perfectly represent decimal fractions like 0.1 and 0.2 but has no problem with integers, converting the values to whole cents avoids rounding errors. Additionally, if the user were to type in more than two decimal places for their bill amount, the use of `Math.round(billNum * 100)` ensures that it will still be converted to a whole number.
+- **Debugging Cursor Traps:** To make the app appear more polished I wanted to remove leading zeros. Initially I tried to use a regex in conjunction with the input event to achieve this, however, this caused the cursor to reset and prevented decimal inputs. Gemini helped me switch to the blur event, and gave me a simpler technique that didn't involve a regex.
+- **Blocking Non-integers for People & Blocking Negative Numbers:** When testing the app I realized there was still room for more polishing, namely by preventing negative numbers in all number inputs and preventing non-integers in just the people input. Gemini helped me work through several variations until I landed on one that utilizes failing fast at the top, leaves clean inputs on the screen, and leaves `0` inputs intact to justify the "Can't be zero" error messages.
+- **Working with the Event Loop:** Another area I got stuck was making the resetBtn work properly; it would clear the form, but it wouldn't disable itself. Gemini showed me how to use `setTimeout` to create an extremely small delay, which allowed the browser's execution stack to clear all the form fields and then update the button's state.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+### Evaluating and Rejecting AI Suggestions
 
-## Submitting your solution
+- **Avoiding Variable Clutter:** Gemini recommended breaking down some code blocks into multiple (4+) separate local variables to streamline conditionals. While this did make some parts of the code more readable, I opted not to take this recommendation because it bloated the script with many variables, and instead I focused on writing more concise logic for the checks.
+- **Appending More Validation:** In the process of testing the quality-of-life features of the app, I noticed that my script did not prevent negative numbers from producing an output on a live basis. When consulting Gemini about how best to implement this (without breaking the QOL features), it initially suggested adding a guard clause at the top of `doMath`. While this did work, I was skeptical of adding a validation step to the calculating function, as that would cross-contaminate two separate facets of the script. Gemini confirmed my alternative solution of simply creating a third helper validator function and invoking it inside the main validator; the AI also caught my mistake of not placing the new call at the top of `validateCalculator`, which would have negated the new validation step.
+- **Responsive UX Design:** I wanted to add a percent sign inside the custom tip input to keep the design consistent with the other inputs. However, this led to a design flaw where the percent symbol in the background overlapped with the placeholder text on certain screen sizes. Gemini suggested shrinking the icon and adjusting the padding, which made the icon look too small and out of place, and caused the text to be off-center.
+  I asked Gemini to scrap that suggestion and instead help me write the code for a dynamic workaround: Remove the icon when the placeholder is active, and change the placeholder text to "Custom %". Then display the icon only after the user has typed some input. Gemini helped me execute this idea using just CSS:
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
+  ```css
+  input.tip-btn:not(:placeholder-shown) {
+    /* Background percentage icon applied only when user types */
+  }
+  ```
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+### Conclusion
 
-## Sharing your solution
+    While I was initially worried about feeling like I was just copying AI suggestions, I walked away from this challenge still feeling like I had learned a lot, and found that adding AI code reviews to my workflow absolutely decreased the time I had to spend debugging, since I did not have to painstakingly search my code for typos or mistakes.
 
-There are multiple places you can share your solution:
+## Author
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+- Frontend Mentor - [@leven-carr](https://www.frontendmentor.io/profile/leven-carr)
+- GitHub - [@leven-carr](https://github.com/leven-carr)
