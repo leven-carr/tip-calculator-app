@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [View code on GitHub](https://github.com/leven-carr/tip-calculator-app)
+- Live Site URL: [GitHub Pages Live Site](https://leven-carr.github.io/tip-calculator-app/)
 
 ## My process
 
