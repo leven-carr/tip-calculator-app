@@ -99,7 +99,7 @@ This project marked my first time using generative AI (Gemini) for help. I wante
 
 ### Conclusion
 
-    While I was initially worried about feeling like I was just copying AI suggestions, I walked away from this challenge still feeling like I had learned a lot, and found that adding AI code reviews to my workflow absolutely decreased the time I had to spend debugging, since I did not have to painstakingly search my code for typos or mistakes.
+While I was initially worried about feeling like I was just copying AI suggestions, I walked away from this challenge still feeling like I had learned a lot, and found that adding AI code reviews to my workflow absolutely decreased the time I had to spend debugging, since I did not have to painstakingly search my code for typos or mistakes.
 
 ## Author
 
