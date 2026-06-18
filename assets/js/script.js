@@ -10,7 +10,7 @@ const resetBtn = calculator.querySelector("#reset-btn");
 //
 // VALIDATORS
 //
-// Runs both validating functions
+// Runs all three validating functions
 function validateCalculator() {
   if (!noNegatives()) {
     return false;
@@ -27,7 +27,24 @@ function validateCalculator() {
   return true;
 }
 
-// Checks that neither the bill input nor the people input have been set to 0
+// Checks if any input field contains a minus sign
+function noNegatives() {
+  let isValid;
+
+  if (
+    bill.value.includes("-") ||
+    people.value.includes("-") ||
+    customTip.value.includes("-")
+  ) {
+    isValid = false;
+  } else {
+    isValid = true;
+  }
+
+  return isValid;
+}
+
+// Checks if the bill and/or people input have been set to zero
 function noZeros() {
   let isValid = true;
 
@@ -61,23 +78,6 @@ function isComplete() {
     isValid = true;
   } else {
     isValid = false;
-  }
-
-  return isValid;
-}
-
-// Checks if any input field contains a minus sign
-function noNegatives() {
-  let isValid;
-
-  if (
-    bill.value.includes("-") ||
-    people.value.includes("-") ||
-    customTip.value.includes("-")
-  ) {
-    isValid = false;
-  } else {
-    isValid = true;
   }
 
   return isValid;
